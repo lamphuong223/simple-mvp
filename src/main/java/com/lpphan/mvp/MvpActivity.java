@@ -22,6 +22,7 @@ public abstract class MvpActivity<V extends MvpView,P extends BasePresenter<V>> 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mPresenter = createPresenter();
+        mPresenter.attachView((V) this);
     }
 
     @Override

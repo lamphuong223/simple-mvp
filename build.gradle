@@ -18,7 +18,29 @@ android {
     }
 }
 
+ext {
+    // Where you will see your artifact in Bintray's web interface
+    // The "bintrayName" should match the name of the Bintray repro.
+    bintrayRepo = 'maven'
+    bintrayName = 'SimpleMvp'
+
+    // Maven metadata
+    publishedGroupId = 'com.lpphan.mvp'
+    libraryName = 'SimpleMvp'
+    // Save yourself a head ache, and set this equal to the name of the Android Studio library
+    // module. The artifact name needs to match the name of the library.
+    artifact = 'SimpleMvp'
+
+    libraryDescription = 'A simple library for android mvp design pattern.'
+    libraryVersion = '0.1.1'
+
+    developerId = 'lamphuong223'
+    developerName = 'Phuong Lam Phan'
+    developerEmail = 'lamphuong22390@gmail.com'
+}
+
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.2.1'
 }
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/attwellBrian/JCenter/master/bintrayv1.gradle'
