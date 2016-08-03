@@ -10,7 +10,7 @@ import com.lpphan.mvp.view.MvpView;
 /**
  * Created by lamphuong on 14/12/2015.
  */
-public abstract class MvpFragment<V extends MvpView,P extends BasePresenter<V>> extends Fragment{
+public abstract class MvpFragment<P extends BasePresenter> extends Fragment implements MvpView{
     protected P mPresenter;
 
     protected P getPresenter(){
@@ -27,7 +27,7 @@ public abstract class MvpFragment<V extends MvpView,P extends BasePresenter<V>> 
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (mPresenter == null) mPresenter = createPresenter();
-        mPresenter.attachView((V) this);
+        mPresenter.attachView(this);
     }
 
     @Override
