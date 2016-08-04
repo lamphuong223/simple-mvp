@@ -15,7 +15,7 @@ allprojects {
 - Add the dependency in your module-level `build.gradle`
 ```groovy
 dependencies {
-    compile 'com.github.lamphuong223:simple-mvp:0.2'
+    compile 'com.github.lamphuong223:simple-mvp:0.2.1'
 }
 ```
 Usage
